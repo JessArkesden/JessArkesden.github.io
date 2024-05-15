@@ -38,6 +38,8 @@ You can find some of my work, or just things I've been playing around with and t
 
 > <p>
   You can find me on GitHub and LinkedIn here:
+  </p>
+  <p>
   <a href="https://github.com/JessArkesden" target="_blank">
     <img src="images/GitHub_icon.png" alt="GitHub" style="width: 40px; height: 40px; margin-top: 10px; margin-right: 10px;">
   </a>

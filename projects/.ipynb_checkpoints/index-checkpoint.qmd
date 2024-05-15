@@ -1,0 +1,23 @@
+---
+title: "<span style='color: white;'>Projects</span>"
+title-block-banner: "#355070"
+page-layout: full
+toc: true
+toc-location: right
+toc-title: Content list
+---
+
+## Access to greenspace
+
+:::{#access-to-greenspace style="display: flex; align-items: center;"}
+[![](access-to-greenspace/icon.png){ width=100px height=100px style="margin-right: 20px;" }](access-to-greenspace/index.qmd)
+
+<div style="flex: 1;">
+  [**<span style="color: #355070;">A spatial analysis of access to greenspace and deprivation in Bradford</span>**](access-to-greenspace/index.qmd)
+
+Using a GWR model to analyze the relationship between nearest greenspace and dimensions of deprivation by Output Area within the Bradford local authority district.
+</div>
+:::
+
+
+

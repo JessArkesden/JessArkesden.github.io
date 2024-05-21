@@ -19,5 +19,16 @@ Using a GWR model to analyze the relationship between nearest greenspace and dim
 </div>
 :::
 
+## 20-minute neighbourhoods
+
+:::{#20min_neighbourhoods style="display: flex; align-items: center;"}
+[![](20min_neighbourhoods/icon.png){ width=100px height=100px style="margin-right: 20px;" }](20min_neighbourhoods/index.qmd)
+
+<div style="flex: 1;">
+  [**<span style="color: #355070;">20-minute neighbourhoods: understanding housing density in Bradford</span>**](20min_neighbourhoods/index.qmd)
+
+Defining neighbourhoods using 800m buffers and identfying properties within these to understand housing density in the Bradford local authority district.
+</div>
+:::
 
 

@@ -31,4 +31,14 @@ Defining neighbourhoods using 800m buffers and identfying properties within thes
 </div>
 :::
 
+## EV charging
 
+:::{#EV_charging style="display: flex; align-items: center;"}
+[![](EV_charging/icon.png){ width=100px height=100px style="margin-right: 20px;" }](EV_charging/index.qmd)
+
+<div style="flex: 1;">
+  [**<span style="color: #355070;">Analysis of public EV chargepoint provision</span>**](EV_charging/index.qmd)
+
+Using public EV chargepoint and plug-in vehicle registration data to understand, by local authority, which areas have the best and worst public EV infrastructure.
+</div>
+:::

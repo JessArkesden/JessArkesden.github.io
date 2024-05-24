@@ -1,0 +1,3146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.554">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Jess Arkesden - Analysis of public EV chargepoint provision</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>
+
+      .quarto-title-block .quarto-title-banner {
+        background: #355070;
+      }
+</style>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Jess Arkesden</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page-left">
+      <h1 class="title"><span style="color: white;">Analysis of public EV chargepoint provision</span></h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page-left">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content list</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#what-data-is-included" id="toc-what-data-is-included" class="nav-link" data-scroll-target="#what-data-is-included">What data is included?</a></li>
+  <li><a href="#what-do-these-features-show" id="toc-what-do-these-features-show" class="nav-link" data-scroll-target="#what-do-these-features-show">What do these features show?</a></li>
+  <li><a href="#what-is-the-relationship-between-the-features" id="toc-what-is-the-relationship-between-the-features" class="nav-link" data-scroll-target="#what-is-the-relationship-between-the-features">What is the relationship between the features?</a></li>
+  <li><a href="#so-what-does-this-mean-for-public-ev-infrastructure" id="toc-so-what-does-this-mean-for-public-ev-infrastructure" class="nav-link" data-scroll-target="#so-what-does-this-mean-for-public-ev-infrastructure">So what does this mean for public EV infrastructure?</a></li>
+  <li><a href="#considerations-and-future-work" id="toc-considerations-and-future-work" class="nav-link" data-scroll-target="#considerations-and-future-work">Considerations and future work</a></li>
+  </ul></li>
+  <li><a href="#coding" id="toc-coding" class="nav-link" data-scroll-target="#coding">Coding</a></li>
+  <li><a href="#import-libraries" id="toc-import-libraries" class="nav-link" data-scroll-target="#import-libraries">Import libraries</a></li>
+  <li><a href="#data-wrangling" id="toc-data-wrangling" class="nav-link" data-scroll-target="#data-wrangling">Data wrangling</a>
+  <ul class="collapse">
+  <li><a href="#ev-chargepoint-data" id="toc-ev-chargepoint-data" class="nav-link" data-scroll-target="#ev-chargepoint-data">EV Chargepoint data</a></li>
+  <li><a href="#ev-cars-data" id="toc-ev-cars-data" class="nav-link" data-scroll-target="#ev-cars-data">EV Cars data</a></li>
+  <li><a href="#lads" id="toc-lads" class="nav-link" data-scroll-target="#lads">LADs</a></li>
+  <li><a href="#oas" id="toc-oas" class="nav-link" data-scroll-target="#oas">OAs</a></li>
+  </ul></li>
+  <li><a href="#feature-engineering" id="toc-feature-engineering" class="nav-link" data-scroll-target="#feature-engineering">Feature engineering</a>
+  <ul class="collapse">
+  <li><a href="#aggregate-ev-car-ownership-data-to-lad" id="toc-aggregate-ev-car-ownership-data-to-lad" class="nav-link" data-scroll-target="#aggregate-ev-car-ownership-data-to-lad">Aggregate EV car ownership data to LAD</a></li>
+  <li><a href="#calculate-distance-to-nearest-chargepoint" id="toc-calculate-distance-to-nearest-chargepoint" class="nav-link" data-scroll-target="#calculate-distance-to-nearest-chargepoint">Calculate distance to nearest chargepoint</a></li>
+  <li><a href="#calculate-number-of-ev-chargepoints-in-each-lad" id="toc-calculate-number-of-ev-chargepoints-in-each-lad" class="nav-link" data-scroll-target="#calculate-number-of-ev-chargepoints-in-each-lad">Calculate number of EV chargepoints in each LAD</a></li>
+  <li><a href="#calculate-ratio-of-ev-cars-to-chargepoints-in-each-lad" id="toc-calculate-ratio-of-ev-cars-to-chargepoints-in-each-lad" class="nav-link" data-scroll-target="#calculate-ratio-of-ev-cars-to-chargepoints-in-each-lad">Calculate ratio of EV cars to chargepoints in each LAD</a></li>
+  <li><a href="#add-average-distance-and-lad-polygon-to-final-dataframe" id="toc-add-average-distance-and-lad-polygon-to-final-dataframe" class="nav-link" data-scroll-target="#add-average-distance-and-lad-polygon-to-final-dataframe">Add average distance and LAD polygon to final dataframe</a></li>
+  <li><a href="#handle-outliers" id="toc-handle-outliers" class="nav-link" data-scroll-target="#handle-outliers">Handle outliers</a></li>
+  </ul></li>
+  <li><a href="#visualising-data" id="toc-visualising-data" class="nav-link" data-scroll-target="#visualising-data">Visualising data</a></li>
+  <li><a href="#creating-a-ranking" id="toc-creating-a-ranking" class="nav-link" data-scroll-target="#creating-a-ranking">Creating a ranking</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+
+
+
+
+
+<p><strong>Go back to the <a href="../../projects/index.html">projects page</a>.</strong></p>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>This analysis uses public EV chargepoint and plug-in vehicle (PiV) registration data to understand, by local authority district (LAD), which areas have the best and worst EV infrastructure.</p>
+<section id="what-data-is-included" class="level3">
+<h3 class="anchored" data-anchor-id="what-data-is-included">What data is included?</h3>
+<p>First, four features are calculated to allow for initial exploration of the data. Details of these are as follows:</p>
+<p><strong>Count of PiVs</strong></p>
+<p><em>Source: DVLA and DfT dataset</em></p>
+<ul>
+<li>A simple count of registered PiVs by LAD is calculated.</li>
+<li>This includes all PiVs with <code>Private</code> keepership. This excludes PiVs where the keepership is <code>Company</code> to avoid skewing the analysis with large quantities of fleet vehicles registered to a single address.</li>
+<li>Where data has been suppressed in the raw file, the <code>[c]</code> value has been replaced with <code>NaN</code></li>
+</ul>
+<p><strong>Count of EV chargepoints</strong></p>
+<p><em>Source: Public EV chargepoint registry</em></p>
+<ul>
+<li>A simple count of public EV chargepoints by LAD is calculated.</li>
+<li>There has been no cleaning of this data beyond converting the <code>latitude</code> and <code>longitude</code> into a <code>point</code>. This is a public dataset and further accuracy has not been verified.</li>
+</ul>
+<p><strong>Ratio of PiVs to EV chargepoints</strong></p>
+<p><em>Source: Author’s calculations</em></p>
+<ul>
+<li>Taking the count of PiVs in each LAD and dividing this by the count of public EV chargepoints in each LAD.</li>
+<li>A higher ratio means there are more PiVs to each chargepoint and therefore public infrastructure may be lacking.</li>
+</ul>
+<p><strong>Average distance to nearest EV chargepoint</strong></p>
+<p><em>Source: Geographies from ONS via Open Geography Portal</em></p>
+<ul>
+<li>Using the population-weighted centroids (PWCs) for each output area (OA) within an LAD, the nearest public EV chargepoint is calculated. OA is the smallest census geography and contains between 40 and 250 households.</li>
+<li>Then this is aggregated to LAD level by taking the average distance of all OAs within the LAD to obtain the average distance to the nearest public EV chargepoint by LAD.</li>
+</ul>
+</section>
+<section id="what-do-these-features-show" class="level3">
+<h3 class="anchored" data-anchor-id="what-do-these-features-show">What do these features show?</h3>
+<p>The following choropleths map these four features. The absolute number of PiVs varies across England and Wales, with LADs across Wales, Lincolnshire and Cumbria having particularly low numbers. By contrast, the highest number of public EV chargepoints by LAD is concentrated in Greater London, with hotspots dotted elsewhere across the country. If we instead look at this as the ratio of PiVs to chargepoints, we again see the patterns change. Hotspots around the southeast of England highlight that there is potentially infrastructure lacking in these areas compared to PiV numbers. Lastly, we can see the average distance to the nearest chargepoint is perhaps unsurprisingly highest in rural areas, particularly in the north of England and Wales.</p>
+<p><img src="Outputs/Feature_choropleths.png" class="img-fluid"></p>
+<p><em>Code to create an interactive version of this map can be found below.</em></p>
+</section>
+<section id="what-is-the-relationship-between-the-features" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-relationship-between-the-features">What is the relationship between the features?</h3>
+<p>The correlation matrix heatmap below shows the relationship between each feature. There is some positive correlation between chargepoints and PiVs, which is good as this suggests that where there are more PiVs there tend to be more chargepoints. There is also some positive correlation between average distance to the nearest chargepoint and the ratio of PiVs to chargepoints. This means that if the distance is greater, there are also more PiVs to chargepoints perhaps suggesting these areas lack infrastructure.</p>
+<p><img src="Outputs/CorrelationMatrix.png" alt="" width="800"></p>
+<p>The following scatter plots illustrate this further, adding a regression line. We can see that there are outliers across both, with a cluster of LADs on the lower end.</p>
+<p><img src="Outputs/Scatter_reg_plots.png" class="img-fluid"></p>
+</section>
+<section id="so-what-does-this-mean-for-public-ev-infrastructure" class="level3">
+<h3 class="anchored" data-anchor-id="so-what-does-this-mean-for-public-ev-infrastructure">So what does this mean for public EV infrastructure?</h3>
+<p>Taking the ratio of PiVs to public EV chargepoints and the average distance to the nearest chargepoint, a simple ranking is created combining the two. Areas with a high ratio of PiVs to chargepoints and a large distance to the nearest chargepoint could be lacking in public EV infrastructure.</p>
+<p><strong>Top 10</strong> The best performing LADs were all in London, suggesting infrastructure in the capital is well established.</p>
+<p><img src="Outputs/Map_of_Top_10.png" alt="" width="450"></p>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+combined_rank
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+288
+</th>
+<td>
+E09000013
+</td>
+<td>
+Hammersmith and Fulham
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr>
+<th>
+308
+</th>
+<td>
+E09000033
+</td>
+<td>
+Westminster
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr>
+<th>
+303
+</th>
+<td>
+E09000028
+</td>
+<td>
+Southwark
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr>
+<th>
+276
+</th>
+<td>
+E09000001
+</td>
+<td>
+City of London
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr>
+<th>
+295
+</th>
+<td>
+E09000020
+</td>
+<td>
+Kensington and Chelsea
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr>
+<th>
+299
+</th>
+<td>
+E09000024
+</td>
+<td>
+Merton
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr>
+<th>
+307
+</th>
+<td>
+E09000032
+</td>
+<td>
+Wandsworth
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr>
+<th>
+282
+</th>
+<td>
+E09000007
+</td>
+<td>
+Camden
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr>
+<th>
+287
+</th>
+<td>
+E09000012
+</td>
+<td>
+Hackney
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr>
+<th>
+294
+</th>
+<td>
+E09000019
+</td>
+<td>
+Islington
+</td>
+<td>
+9.0
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Bottom 10</strong> The worst performing LADs are more dispersed. Most are more rural areas, or include only one or two larger towns.</p>
+<p><img src="Outputs/Map_of_Bottom_10.png" alt="" width="500"></p>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+combined_rank
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+99
+</th>
+<td>
+E07000074
+</td>
+<td>
+Maldon
+</td>
+<td>
+330.0
+</td>
+</tr>
+<tr>
+<th>
+89
+</th>
+<td>
+E07000064
+</td>
+<td>
+Rother
+</td>
+<td>
+329.0
+</td>
+</tr>
+<tr>
+<th>
+235
+</th>
+<td>
+E07000242
+</td>
+<td>
+East Hertfordshire
+</td>
+<td>
+328.0
+</td>
+</tr>
+<tr>
+<th>
+16
+</th>
+<td>
+E06000017
+</td>
+<td>
+Rutland
+</td>
+<td>
+327.0
+</td>
+</tr>
+<tr>
+<th>
+100
+</th>
+<td>
+E07000075
+</td>
+<td>
+Rochford
+</td>
+<td>
+326.0
+</td>
+</tr>
+<tr>
+<th>
+85
+</th>
+<td>
+E07000047
+</td>
+<td>
+West Devon
+</td>
+<td>
+325.0
+</td>
+</tr>
+<tr>
+<th>
+177
+</th>
+<td>
+E07000169
+</td>
+<td>
+Selby
+</td>
+<td>
+324.0
+</td>
+</tr>
+<tr>
+<th>
+160
+</th>
+<td>
+E07000139
+</td>
+<td>
+North Kesteven
+</td>
+<td>
+323.0
+</td>
+</tr>
+<tr>
+<th>
+82
+</th>
+<td>
+E07000044
+</td>
+<td>
+South Hams
+</td>
+<td>
+321.0
+</td>
+</tr>
+<tr>
+<th>
+199
+</th>
+<td>
+E07000198
+</td>
+<td>
+Staffordshire Moorlands
+</td>
+<td>
+321.0
+</td>
+</tr>
+</tbody>
+</table>
+<p>This information could be used by both public and private organisations alike to understand where public EV infrastructure is lacking and therefore incentivise installation of new infrastructure.</p>
+</section>
+<section id="considerations-and-future-work" class="level3">
+<h3 class="anchored" data-anchor-id="considerations-and-future-work">Considerations and future work</h3>
+<p>This analysis has demonstrated that current public EV structure may be lacking in some areas based on the current number of PiVs. This does not include:</p>
+<ul>
+<li>A temporal view of how PiV ownership has changed over time - there may be areas experiencing higher growth, with could arguably justify increased investment over other areas.</li>
+<li>EV infrastructure on private property (e.g.&nbsp;at home) - areas with a higher number of terraced houses or flats may require more public infrastructure as it can often be more challenging to install at these types of properties. Areas with higher rates of rented accomodation over private ownership could also face challenges as it would be the responsibility of the landlord to install EV chargepoints. Again, these areas may require more public infrastructure and so overlaying this data could be an interesting investigation to see how it affects the ranking.</li>
+</ul>
+<p>The public EV chargepoint registry has also not been quality checked. Further investigation into this dataset and wrangling/cleaning as appropriate may impact results.</p>
+</section>
+</section>
+<section id="coding" class="level2">
+<h2 class="anchored" data-anchor-id="coding">Coding</h2>
+</section>
+<section id="import-libraries" class="level2">
+<h2 class="anchored" data-anchor-id="import-libraries">Import libraries</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shapely.geometry <span class="im">import</span> Point</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> zscore</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> contextily <span class="im">as</span> ctx</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> folium</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="data-wrangling" class="level2">
+<h2 class="anchored" data-anchor-id="data-wrangling">Data wrangling</h2>
+<section id="ev-chargepoint-data" class="level3">
+<h3 class="anchored" data-anchor-id="ev-chargepoint-data">EV Chargepoint data</h3>
+<ul>
+<li><strong>Public EV chargepoint registry</strong>, available from: <a href="https://www.gov.uk/guidance/find-and-use-data-on-public-electric-vehicle-chargepoints">https://www.gov.uk/guidance/find-and-use-data-on-public-electric-vehicle-chargepoints</a></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import csv</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>chargepoints_RAW <span class="op">=</span> pd.read_csv(<span class="st">'Data/national-charge-point-registry_230524.csv'</span>, low_memory<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce to just required columns</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>chargepoints_TRIM <span class="op">=</span> chargepoints_RAW[[<span class="st">'chargeDeviceID'</span>,<span class="st">'reference'</span>,<span class="st">'name'</span>,<span class="st">'latitude'</span>,<span class="st">'longitude'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check length of df</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(chargepoints_TRIM)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>40580</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>chargepoints_TRIM.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+chargeDeviceID
+</th>
+<th>
+reference
+</th>
+<th>
+name
+</th>
+<th>
+latitude
+</th>
+<th>
+longitude
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+b86a77a42bb68c81946ec50cfc95e89d
+</td>
+<td>
+11172306P
+</td>
+<td>
+Network Rail Westwood Centre 1
+</td>
+<td>
+52.386590
+</td>
+<td>
+-1.587384
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+dc1c347d471f68e41ad2a9a1145941d6
+</td>
+<td>
+APT-0296-0015/13P
+</td>
+<td>
+Brindley Drive Car Park Birmingham - 70524
+</td>
+<td>
+52.480918
+</td>
+<td>
+-1.907710
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+7d545ad9367ccb8a80c94a953314ae71
+</td>
+<td>
+CM123
+</td>
+<td>
+Renault Liverpool
+</td>
+<td>
+53.383579
+</td>
+<td>
+-2.977230
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+68c7fca1e3bba5e49ec90847dcdd456b
+</td>
+<td>
+CM164
+</td>
+<td>
+NCP Portman Square
+</td>
+<td>
+51.516201
+</td>
+<td>
+-0.157996
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+ac7a21c48f5833b33a5b606b2089e6a9
+</td>
+<td>
+CM167
+</td>
+<td>
+NCP Prince Street Car Park
+</td>
+<td>
+51.450340
+</td>
+<td>
+-2.596704
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Geocode locations using lat and long, set crs to 4326 and then convert to 27700 (British National Grid), drop lat and long</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>chargepoints_gdf <span class="op">=</span> gpd.GeoDataFrame(chargepoints_TRIM,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                                    geometry<span class="op">=</span>gpd.points_from_xy(chargepoints_TRIM.longitude, chargepoints_TRIM.latitude)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                                   ).set_crs(epsg<span class="op">=</span><span class="dv">4326</span>, inplace<span class="op">=</span><span class="va">True</span>).to_crs(epsg<span class="op">=</span><span class="dv">27700</span>).drop(columns<span class="op">=</span>[<span class="st">'latitude'</span>,<span class="st">'longitude'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>chargepoints_gdf.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+chargeDeviceID
+</th>
+<th>
+reference
+</th>
+<th>
+name
+</th>
+<th>
+geometry
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+b86a77a42bb68c81946ec50cfc95e89d
+</td>
+<td>
+11172306P
+</td>
+<td>
+Network Rail Westwood Centre 1
+</td>
+<td>
+POINT (428179.411 276586.797)
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+dc1c347d471f68e41ad2a9a1145941d6
+</td>
+<td>
+APT-0296-0015/13P
+</td>
+<td>
+Brindley Drive Car Park Birmingham - 70524
+</td>
+<td>
+POINT (406364.849 287003.294)
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+7d545ad9367ccb8a80c94a953314ae71
+</td>
+<td>
+CM123
+</td>
+<td>
+Renault Liverpool
+</td>
+<td>
+POINT (335096.815 387859.900)
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+68c7fca1e3bba5e49ec90847dcdd456b
+</td>
+<td>
+CM164
+</td>
+<td>
+NCP Portman Square
+</td>
+<td>
+POINT (527908.652 181305.630)
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+ac7a21c48f5833b33a5b606b2089e6a9
+</td>
+<td>
+CM167
+</td>
+<td>
+NCP Prince Street Car Park
+</td>
+<td>
+POINT (358631.700 172541.813)
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ev-cars-data" class="level3">
+<h3 class="anchored" data-anchor-id="ev-cars-data">EV Cars data</h3>
+<ul>
+<li><strong>df_VEH0145</strong>: Licensed plug-in vehicles (PiVs) at the end of the quarter by fuel type and lower super output area (LSOA): United Kingdom, available from: <a href="https://www.gov.uk/government/statistical-data-sets/vehicle-licensing-statistics-data-files">https://www.gov.uk/government/statistical-data-sets/vehicle-licensing-statistics-data-files</a></li>
+</ul>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import csv</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>PiVs_RAW <span class="op">=</span> pd.read_csv(<span class="st">'Data/df_VEH0145.csv'</span>, low_memory<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce to just required columns</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>PiVs_TRIM <span class="op">=</span> PiVs_RAW[[<span class="st">'LSOA11CD'</span>,<span class="st">'LSOA11NM'</span>,<span class="st">'Fuel'</span>,<span class="st">'Keepership'</span>,<span class="st">'2023 Q4'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>PiVs_TRIM.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LSOA11CD
+</th>
+<th>
+LSOA11NM
+</th>
+<th>
+Fuel
+</th>
+<th>
+Keepership
+</th>
+<th>
+2023 Q4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+95AA01S1
+</td>
+<td>
+Aldergrove 1
+</td>
+<td>
+Battery electric
+</td>
+<td>
+Company
+</td>
+<td>
+[c]
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+95AA01S2
+</td>
+<td>
+Aldergrove 2
+</td>
+<td>
+Battery electric
+</td>
+<td>
+Company
+</td>
+<td>
+9
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+95AA01S3
+</td>
+<td>
+Aldergrove 3
+</td>
+<td>
+Battery electric
+</td>
+<td>
+Company
+</td>
+<td>
+[c]
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+95AA02W1
+</td>
+<td>
+Balloo
+</td>
+<td>
+Battery electric
+</td>
+<td>
+Company
+</td>
+<td>
+5
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+95AA03W1
+</td>
+<td>
+Ballycraigy
+</td>
+<td>
+Battery electric
+</td>
+<td>
+Company
+</td>
+<td>
+[c]
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter to all Fuel and private Keepership types, then drop those columns</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>PiVs_FILTERED <span class="op">=</span> PiVs_TRIM[(PiVs_TRIM[<span class="st">'Fuel'</span>] <span class="op">==</span> <span class="st">'Total'</span>) <span class="op">&amp;</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>                          (PiVs_TRIM[<span class="st">'Keepership'</span>] <span class="op">==</span> <span class="st">'Private'</span>)].drop(columns<span class="op">=</span>[<span class="st">'Fuel'</span>, <span class="st">'Keepership'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace the suppressed [c] data with NaN</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>PiVs_FILTERED[<span class="st">'2023 Q4'</span>] <span class="op">=</span> PiVs_FILTERED[<span class="st">'2023 Q4'</span>].replace(<span class="st">'[c]'</span>, np.nan)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert the '2023 Q4' column to numeric data type</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>PiVs_FILTERED[<span class="st">'2023 Q4'</span>] <span class="op">=</span> pd.to_numeric(PiVs_FILTERED[<span class="st">'2023 Q4'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>PiVs_FILTERED.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LSOA11CD
+</th>
+<th>
+LSOA11NM
+</th>
+<th>
+2023 Q4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+189862
+</th>
+<td>
+95AA01S1
+</td>
+<td>
+Aldergrove 1
+</td>
+<td>
+NaN
+</td>
+</tr>
+<tr>
+<th>
+189863
+</th>
+<td>
+95AA01S2
+</td>
+<td>
+Aldergrove 2
+</td>
+<td>
+15.0
+</td>
+</tr>
+<tr>
+<th>
+189864
+</th>
+<td>
+95AA01S3
+</td>
+<td>
+Aldergrove 3
+</td>
+<td>
+19.0
+</td>
+</tr>
+<tr>
+<th>
+189865
+</th>
+<td>
+95AA02W1
+</td>
+<td>
+Balloo
+</td>
+<td>
+10.0
+</td>
+</tr>
+<tr>
+<th>
+189866
+</th>
+<td>
+95AA03W1
+</td>
+<td>
+Ballycraigy
+</td>
+<td>
+NaN
+</td>
+</tr>
+</tbody>
+</table>
+<section id="lsoa-lookup" class="level4">
+<h4 class="anchored" data-anchor-id="lsoa-lookup">LSOA lookup</h4>
+<p>The PiV data uses the LSOA codes from 2011 and so this will need to be changed to the LSOA 2021 codes.</p>
+<ul>
+<li><strong>LSOA best fit lookup 2011 to 2021</strong>, available from: <a href="https://geoportal.statistics.gov.uk/datasets/b14d449ba10a48508bd05cd4a9775e2b_0/explore">https://geoportal.statistics.gov.uk/datasets/b14d449ba10a48508bd05cd4a9775e2b_0/explore</a></li>
+</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import csv</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>LSOA_lookup <span class="op">=</span> pd.read_csv(</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data/LSOA_(2011)_to_LSOA_(2021)_to_Local_Authority_District_(2022)_Best_Fit_Lookup_for_EW_(V2).csv'</span>,</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    low_memory<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce to just required columns</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>LSOA_lookup <span class="op">=</span> LSOA_lookup[[<span class="st">'LSOA11CD'</span>,<span class="st">'LSOA21CD'</span>,<span class="st">'LAD22CD'</span>,<span class="st">'LAD22NM'</span>]].copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Match 2021 to 2011 codes using lookup</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>PiVs_FILTERED <span class="op">=</span> pd.merge(PiVs_FILTERED, LSOA_lookup, on<span class="op">=</span><span class="st">'LSOA11CD'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>PiVs_FILTERED.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LSOA11CD
+</th>
+<th>
+LSOA11NM
+</th>
+<th>
+2023 Q4
+</th>
+<th>
+LSOA21CD
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E01000001
+</td>
+<td>
+City of London 001A
+</td>
+<td>
+28.0
+</td>
+<td>
+E01000001
+</td>
+<td>
+E09000001
+</td>
+<td>
+City of London
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E01000002
+</td>
+<td>
+City of London 001B
+</td>
+<td>
+30.0
+</td>
+<td>
+E01000002
+</td>
+<td>
+E09000001
+</td>
+<td>
+City of London
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E01000003
+</td>
+<td>
+City of London 001C
+</td>
+<td>
+15.0
+</td>
+<td>
+E01000003
+</td>
+<td>
+E09000001
+</td>
+<td>
+City of London
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E01000005
+</td>
+<td>
+City of London 001E
+</td>
+<td>
+NaN
+</td>
+<td>
+E01000005
+</td>
+<td>
+E09000001
+</td>
+<td>
+City of London
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E01000006
+</td>
+<td>
+Barking and Dagenham 016A
+</td>
+<td>
+18.0
+</td>
+<td>
+E01000006
+</td>
+<td>
+E09000002
+</td>
+<td>
+Barking and Dagenham
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="lads" class="level3">
+<h3 class="anchored" data-anchor-id="lads">LADs</h3>
+<ul>
+<li><strong>LADs 2021 polygons</strong>, available from: <a href="https://geoportal.statistics.gov.uk/datasets/305779d69bf44feea05eeaa78ca26b5f_0/explore">https://geoportal.statistics.gov.uk/datasets/305779d69bf44feea05eeaa78ca26b5f_0/explore</a></li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import shp file</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>LADs <span class="op">=</span> gpd.read_file(<span class="st">'Data/Local_Authority_Districts_December_2022_UK_BFC_V2_-177113771882051469/LAD_DEC_2022_UK_BFC_V2.shp'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce to just required columns</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>LADs <span class="op">=</span> LADs[[<span class="st">'LAD22CD'</span>,<span class="st">'LAD22NM'</span>,<span class="st">'geometry'</span>]].copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>LADs.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+geometry
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E06000001
+</td>
+<td>
+Hartlepool
+</td>
+<td>
+MULTIPOLYGON (((450154.599 525938.201, 450140….
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E06000002
+</td>
+<td>
+Middlesbrough
+</td>
+<td>
+MULTIPOLYGON (((446854.700 517192.700, 446854….
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E06000003
+</td>
+<td>
+Redcar and Cleveland
+</td>
+<td>
+MULTIPOLYGON (((451747.397 520561.100, 451792….
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E06000004
+</td>
+<td>
+Stockton-on-Tees
+</td>
+<td>
+MULTIPOLYGON (((447177.704 517811.797, 447176….
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E06000005
+</td>
+<td>
+Darlington
+</td>
+<td>
+POLYGON ((423496.602 524724.299, 423497.204 52…
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(LADs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>374</p>
+</section>
+<section id="oas" class="level3">
+<h3 class="anchored" data-anchor-id="oas">OAs</h3>
+<p>This analysis will use the population-weighted centroids (PWCs) to find the nearest EV chargepoints. This will then be aggregated to LAD level, so the OA to LAD lookup is required.</p>
+<ul>
+<li><strong>OA 2021 PWCs</strong>, available from: <a href="https://geoportal.statistics.gov.uk/datasets/b9b2b2440af240ce9d30a1d39a7507c2_0/explore">https://geoportal.statistics.gov.uk/datasets/b9b2b2440af240ce9d30a1d39a7507c2_0/explore</a></li>
+<li><strong>OA to LAD lookup</strong>, available from: <a href="https://geoportal.statistics.gov.uk/datasets/b9ca90c10aaa4b8d9791e9859a38ca67_0/explore">https://geoportal.statistics.gov.uk/datasets/b9ca90c10aaa4b8d9791e9859a38ca67_0/explore</a></li>
+</ul>
+<section id="oa-pwcs" class="level4">
+<h4 class="anchored" data-anchor-id="oa-pwcs">OA PWCs</h4>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import shp file</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>OA_PWC <span class="op">=</span> gpd.read_file(<span class="st">'Data/Output_Areas_2021_PWC_V3_-1981902074309169314/PopCentroids_EW_2021_V3.shp'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce to just required columns</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>OA_PWC <span class="op">=</span> OA_PWC[[<span class="st">'OA21CD'</span>,<span class="st">'geometry'</span>]].copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="oa-to-lad-lookup" class="level4">
+<h4 class="anchored" data-anchor-id="oa-to-lad-lookup">OA to LAD lookup</h4>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import csv</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>OA_lookup <span class="op">=</span> pd.read_csv(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Data/Output_Area_to_Lower_layer_Super_Output_Area_to_Middle_layer_Super_Output_Area_to_Local_Authority_District_(December_2021)_Lookup_in_England_and_Wales_v3.csv'</span>,</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    low_memory<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only required columns</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>OA_lookup <span class="op">=</span> OA_lookup[[<span class="st">'OA21CD'</span>,<span class="st">'LSOA21CD'</span>,<span class="st">'LAD22CD'</span>]].copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>OA_lookup.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+OA21CD
+</th>
+<th>
+LSOA21CD
+</th>
+<th>
+LAD22CD
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E00060358
+</td>
+<td>
+E01011968
+</td>
+<td>
+E06000001
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E00060359
+</td>
+<td>
+E01011968
+</td>
+<td>
+E06000001
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E00060360
+</td>
+<td>
+E01011968
+</td>
+<td>
+E06000001
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E00060361
+</td>
+<td>
+E01011968
+</td>
+<td>
+E06000001
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E00060362
+</td>
+<td>
+E01011970
+</td>
+<td>
+E06000001
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="feature-engineering" class="level2">
+<h2 class="anchored" data-anchor-id="feature-engineering">Feature engineering</h2>
+<section id="aggregate-ev-car-ownership-data-to-lad" class="level3">
+<h3 class="anchored" data-anchor-id="aggregate-ev-car-ownership-data-to-lad">Aggregate EV car ownership data to LAD</h3>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate to LAD and calculate total number of PiVs</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>PiVs_LAD <span class="op">=</span> PiVs_FILTERED.groupby(<span class="st">'LAD22CD'</span>)[<span class="st">'2023 Q4'</span>].agg(<span class="st">'sum'</span>).reset_index()</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename column to PiVs</span></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>PiVs_LAD.rename(columns<span class="op">=</span>{<span class="st">'2023 Q4'</span>: <span class="st">'PiVs'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>PiVs_LAD.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+PiVs
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E06000001
+</td>
+<td>
+410.0
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E06000002
+</td>
+<td>
+391.0
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E06000003
+</td>
+<td>
+580.0
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E06000004
+</td>
+<td>
+1308.0
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E06000005
+</td>
+<td>
+719.0
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(PiVs_LAD)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>331</p>
+</section>
+<section id="calculate-distance-to-nearest-chargepoint" class="level3">
+<h3 class="anchored" data-anchor-id="calculate-distance-to-nearest-chargepoint">Calculate distance to nearest chargepoint</h3>
+<ul>
+<li>Using the OA PWCs, calculate the nearest EV chargepoint.</li>
+<li>Aggregate this to LAD level to get the average distance to the nearest chargepoint by LAD.</li>
+</ul>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Find the nearest chargepoint to each OA PWC and calculate distance in metres</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>OA_nearest_chargepoint <span class="op">=</span> OA_PWC.sjoin_nearest(chargepoints_gdf, distance_col<span class="op">=</span><span class="st">'distance'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge on OA_lookup_Leeds to get the LAD22CDs</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>OA_nearest_chargepoint <span class="op">=</span> pd.merge(OA_nearest_chargepoint, OA_lookup, on<span class="op">=</span><span class="st">'OA21CD'</span>, how<span class="op">=</span><span class="st">'inner'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Keep only required columns</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>OA_nearest_chargepoint <span class="op">=</span> OA_nearest_chargepoint[[<span class="st">'OA21CD'</span>,<span class="st">'geometry'</span>,<span class="st">'distance'</span>,<span class="st">'LAD22CD'</span>]].copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate to LAD and calculate average distance to nearest chargepoint</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>avg_dist_nearest_chargepoint_LAD <span class="op">=</span> OA_nearest_chargepoint.groupby(<span class="st">'LAD22CD'</span>)[<span class="st">'distance'</span>].agg(<span class="st">'mean'</span>).reset_index()</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename column to avg_distance</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>avg_dist_nearest_chargepoint_LAD.rename(columns<span class="op">=</span>{<span class="st">'distance'</span>: <span class="st">'avg_distance'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>avg_dist_nearest_chargepoint_LAD.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+avg_distance
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E06000001
+</td>
+<td>
+1649.498055
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E06000002
+</td>
+<td>
+1088.305461
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E06000003
+</td>
+<td>
+1454.585351
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E06000004
+</td>
+<td>
+911.259807
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E06000005
+</td>
+<td>
+1188.923394
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(avg_dist_nearest_chargepoint_LAD)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>331</p>
+</section>
+<section id="calculate-number-of-ev-chargepoints-in-each-lad" class="level3">
+<h3 class="anchored" data-anchor-id="calculate-number-of-ev-chargepoints-in-each-lad">Calculate number of EV chargepoints in each LAD</h3>
+<ul>
+<li>Aggregate the EV chargepoint data to LAD level to get total number of chargepoints in each LAD.</li>
+</ul>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Spatially match</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>chargepoints_LAD <span class="op">=</span> gpd.sjoin(LADs, chargepoints_gdf, predicate<span class="op">=</span><span class="st">'intersects'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Aggregate to LAD and calculate total number of chargepoints</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>chargepoints_LAD <span class="op">=</span> chargepoints_LAD.groupby(<span class="st">'LAD22CD'</span>)[<span class="st">'index_right'</span>].agg(<span class="st">'count'</span>).reset_index()</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Rename column to total_chargepoints</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>chargepoints_LAD.rename(columns<span class="op">=</span>{<span class="st">'index_right'</span>: <span class="st">'total_chargepoints'</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>chargepoints_LAD.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+total_chargepoints
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E06000001
+</td>
+<td>
+42
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E06000002
+</td>
+<td>
+51
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E06000003
+</td>
+<td>
+46
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E06000004
+</td>
+<td>
+167
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E06000005
+</td>
+<td>
+76
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(chargepoints_LAD)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>373</p>
+</section>
+<section id="calculate-ratio-of-ev-cars-to-chargepoints-in-each-lad" class="level3">
+<h3 class="anchored" data-anchor-id="calculate-ratio-of-ev-cars-to-chargepoints-in-each-lad">Calculate ratio of EV cars to chargepoints in each LAD</h3>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Merge PiVs and chargepoint count dataframes</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>ratio_PiVs_to_chargepoints <span class="op">=</span> pd.merge(PiVs_LAD, chargepoints_LAD, on<span class="op">=</span><span class="st">'LAD22CD'</span>, how<span class="op">=</span><span class="st">'left'</span>)</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace NaN values with 0 where there are no chargepoints in an MSOA</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>ratio_PiVs_to_chargepoints.fillna({<span class="st">'total_chargepoints'</span>: <span class="dv">0</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate ratio</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>ratio_PiVs_to_chargepoints[<span class="st">'ratio_PiVs_to_chargepoints'</span>] <span class="op">=</span> (</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    ratio_PiVs_to_chargepoints[<span class="st">'PiVs'</span>] <span class="op">/</span> ratio_PiVs_to_chargepoints[<span class="st">'total_chargepoints'</span>])</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace 'inf' with NaN</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>ratio_PiVs_to_chargepoints[<span class="st">'ratio_PiVs_to_chargepoints'</span>] <span class="op">=</span> ratio_PiVs_to_chargepoints[</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'ratio_PiVs_to_chargepoints'</span>].replace([np.inf, <span class="op">-</span>np.inf], np.nan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="add-average-distance-and-lad-polygon-to-final-dataframe" class="level3">
+<h3 class="anchored" data-anchor-id="add-average-distance-and-lad-polygon-to-final-dataframe">Add average distance and LAD polygon to final dataframe</h3>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Add nearest chargepoint</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>final_df <span class="op">=</span> pd.merge(ratio_PiVs_to_chargepoints,avg_dist_nearest_chargepoint_LAD, on<span class="op">=</span><span class="st">'LAD22CD'</span>)</span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Add LAD polygons</span></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>final_df <span class="op">=</span> pd.merge(LADs, final_df, on<span class="op">=</span><span class="st">'LAD22CD'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>final_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+geometry
+</th>
+<th>
+PiVs
+</th>
+<th>
+total_chargepoints
+</th>
+<th>
+ratio_PiVs_to_chargepoints
+</th>
+<th>
+avg_distance
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E06000001
+</td>
+<td>
+Hartlepool
+</td>
+<td>
+MULTIPOLYGON (((450154.599 525938.201, 450140….
+</td>
+<td>
+410.0
+</td>
+<td>
+42.0
+</td>
+<td>
+9.761905
+</td>
+<td>
+1649.498055
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E06000002
+</td>
+<td>
+Middlesbrough
+</td>
+<td>
+MULTIPOLYGON (((446854.700 517192.700, 446854….
+</td>
+<td>
+391.0
+</td>
+<td>
+51.0
+</td>
+<td>
+7.666667
+</td>
+<td>
+1088.305461
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E06000003
+</td>
+<td>
+Redcar and Cleveland
+</td>
+<td>
+MULTIPOLYGON (((451747.397 520561.100, 451792….
+</td>
+<td>
+580.0
+</td>
+<td>
+46.0
+</td>
+<td>
+12.608696
+</td>
+<td>
+1454.585351
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E06000004
+</td>
+<td>
+Stockton-on-Tees
+</td>
+<td>
+MULTIPOLYGON (((447177.704 517811.797, 447176….
+</td>
+<td>
+1308.0
+</td>
+<td>
+167.0
+</td>
+<td>
+7.832335
+</td>
+<td>
+911.259807
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E06000005
+</td>
+<td>
+Darlington
+</td>
+<td>
+POLYGON ((423496.602 524724.299, 423497.204 52…
+</td>
+<td>
+719.0
+</td>
+<td>
+76.0
+</td>
+<td>
+9.460526
+</td>
+<td>
+1188.923394
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="handle-outliers" class="level3">
+<h3 class="anchored" data-anchor-id="handle-outliers">Handle outliers</h3>
+<p>There are some outliers on the top end, so anything outside 2sd will be amended.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each variable and calculate mean, std, and threshold</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> variable <span class="kw">in</span> [<span class="st">'PiVs'</span>, <span class="st">'total_chargepoints'</span>, <span class="st">'ratio_PiVs_to_chargepoints'</span>, <span class="st">'avg_distance'</span>]:</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>    mean_var <span class="op">=</span> final_df[variable].mean()</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>    std_var <span class="op">=</span> final_df[variable].std()</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a>    threshold_var <span class="op">=</span> mean_var <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> std_var</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Create new column based on outlier condition</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>    final_df[<span class="ss">f'amended_</span><span class="sc">{</span>variable<span class="sc">}</span><span class="ss">'</span>] <span class="op">=</span> final_df[variable].<span class="bu">apply</span>(<span class="kw">lambda</span> x: threshold_var <span class="cf">if</span> x <span class="op">&gt;</span> threshold_var <span class="cf">else</span> x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visual check</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>final_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+geometry
+</th>
+<th>
+PiVs
+</th>
+<th>
+total_chargepoints
+</th>
+<th>
+ratio_PiVs_to_chargepoints
+</th>
+<th>
+avg_distance
+</th>
+<th>
+amended_PiVs
+</th>
+<th>
+amended_total_chargepoints
+</th>
+<th>
+amended_ratio_PiVs_to_chargepoints
+</th>
+<th>
+amended_avg_distance
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+0
+</th>
+<td>
+E06000001
+</td>
+<td>
+Hartlepool
+</td>
+<td>
+MULTIPOLYGON (((450154.599 525938.201, 450140….
+</td>
+<td>
+410.0
+</td>
+<td>
+42.0
+</td>
+<td>
+9.761905
+</td>
+<td>
+1649.498055
+</td>
+<td>
+410.0
+</td>
+<td>
+42.0
+</td>
+<td>
+9.761905
+</td>
+<td>
+1649.498055
+</td>
+</tr>
+<tr>
+<th>
+1
+</th>
+<td>
+E06000002
+</td>
+<td>
+Middlesbrough
+</td>
+<td>
+MULTIPOLYGON (((446854.700 517192.700, 446854….
+</td>
+<td>
+391.0
+</td>
+<td>
+51.0
+</td>
+<td>
+7.666667
+</td>
+<td>
+1088.305461
+</td>
+<td>
+391.0
+</td>
+<td>
+51.0
+</td>
+<td>
+7.666667
+</td>
+<td>
+1088.305461
+</td>
+</tr>
+<tr>
+<th>
+2
+</th>
+<td>
+E06000003
+</td>
+<td>
+Redcar and Cleveland
+</td>
+<td>
+MULTIPOLYGON (((451747.397 520561.100, 451792….
+</td>
+<td>
+580.0
+</td>
+<td>
+46.0
+</td>
+<td>
+12.608696
+</td>
+<td>
+1454.585351
+</td>
+<td>
+580.0
+</td>
+<td>
+46.0
+</td>
+<td>
+12.608696
+</td>
+<td>
+1454.585351
+</td>
+</tr>
+<tr>
+<th>
+3
+</th>
+<td>
+E06000004
+</td>
+<td>
+Stockton-on-Tees
+</td>
+<td>
+MULTIPOLYGON (((447177.704 517811.797, 447176….
+</td>
+<td>
+1308.0
+</td>
+<td>
+167.0
+</td>
+<td>
+7.832335
+</td>
+<td>
+911.259807
+</td>
+<td>
+1308.0
+</td>
+<td>
+167.0
+</td>
+<td>
+7.832335
+</td>
+<td>
+911.259807
+</td>
+</tr>
+<tr>
+<th>
+4
+</th>
+<td>
+E06000005
+</td>
+<td>
+Darlington
+</td>
+<td>
+POLYGON ((423496.602 524724.299, 423497.204 52…
+</td>
+<td>
+719.0
+</td>
+<td>
+76.0
+</td>
+<td>
+9.460526
+</td>
+<td>
+1188.923394
+</td>
+<td>
+719.0
+</td>
+<td>
+76.0
+</td>
+<td>
+9.460526
+</td>
+<td>
+1188.923394
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="visualising-data" class="level2">
+<h2 class="anchored" data-anchor-id="visualising-data">Visualising data</h2>
+<p>The following code builds an interactive map of the features in <code>final_df</code>. This is saved down into an <code>Outputs/</code> folder as an HTML file.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the individual layers</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> final_df.explore(</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">"amended_PiVs"</span>,</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>    scheme<span class="op">=</span><span class="st">"naturalbreaks"</span>,</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'YlOrRd'</span>,</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>    k<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">"LAD22CD"</span>, <span class="st">"LAD22NM"</span>, <span class="st">"amended_PiVs"</span>],</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>    style_kwds<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, weight<span class="op">=</span><span class="fl">0.5</span>, fillOpacity<span class="op">=</span><span class="fl">0.8</span>),</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>    highlight_kwds<span class="op">=</span><span class="bu">dict</span>(fillOpacity<span class="op">=</span><span class="dv">1</span>),</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"Plug-in Vehicles"</span>,</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>    show<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>final_df.explore(</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>    m<span class="op">=</span>m,</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">"amended_total_chargepoints"</span>,</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>    scheme<span class="op">=</span><span class="st">"naturalbreaks"</span>,</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'YlOrRd'</span>,</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>    k<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">"LAD22CD"</span>, <span class="st">"LAD22NM"</span>, <span class="st">"amended_total_chargepoints"</span>],</span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>    style_kwds<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, weight<span class="op">=</span><span class="fl">0.5</span>, fillOpacity<span class="op">=</span><span class="fl">0.8</span>),</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a>    highlight_kwds<span class="op">=</span><span class="bu">dict</span>(fillOpacity<span class="op">=</span><span class="dv">1</span>),</span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"Total EV Chargepoints"</span>,</span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a>    show<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true" tabindex="-1"></a>final_df.explore(</span>
+<span id="cb46-28"><a href="#cb46-28" aria-hidden="true" tabindex="-1"></a>    m<span class="op">=</span>m,</span>
+<span id="cb46-29"><a href="#cb46-29" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">"amended_ratio_PiVs_to_chargepoints"</span>,</span>
+<span id="cb46-30"><a href="#cb46-30" aria-hidden="true" tabindex="-1"></a>    scheme<span class="op">=</span><span class="st">"naturalbreaks"</span>,</span>
+<span id="cb46-31"><a href="#cb46-31" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'YlOrRd'</span>,</span>
+<span id="cb46-32"><a href="#cb46-32" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb46-33"><a href="#cb46-33" aria-hidden="true" tabindex="-1"></a>    k<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb46-34"><a href="#cb46-34" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">"LAD22CD"</span>, <span class="st">"LAD22NM"</span>, <span class="st">"amended_ratio_PiVs_to_chargepoints"</span>],</span>
+<span id="cb46-35"><a href="#cb46-35" aria-hidden="true" tabindex="-1"></a>    style_kwds<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, weight<span class="op">=</span><span class="fl">0.5</span>, fillOpacity<span class="op">=</span><span class="fl">0.8</span>),</span>
+<span id="cb46-36"><a href="#cb46-36" aria-hidden="true" tabindex="-1"></a>    highlight_kwds<span class="op">=</span><span class="bu">dict</span>(fillOpacity<span class="op">=</span><span class="dv">1</span>),</span>
+<span id="cb46-37"><a href="#cb46-37" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"Ratio of Plug-in Vehicles to EV Chargepoints"</span>,</span>
+<span id="cb46-38"><a href="#cb46-38" aria-hidden="true" tabindex="-1"></a>    show<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb46-39"><a href="#cb46-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-40"><a href="#cb46-40" aria-hidden="true" tabindex="-1"></a>final_df.explore(</span>
+<span id="cb46-41"><a href="#cb46-41" aria-hidden="true" tabindex="-1"></a>    m<span class="op">=</span>m,</span>
+<span id="cb46-42"><a href="#cb46-42" aria-hidden="true" tabindex="-1"></a>    column<span class="op">=</span><span class="st">"amended_avg_distance"</span>,</span>
+<span id="cb46-43"><a href="#cb46-43" aria-hidden="true" tabindex="-1"></a>    scheme<span class="op">=</span><span class="st">"naturalbreaks"</span>,</span>
+<span id="cb46-44"><a href="#cb46-44" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">'YlOrRd'</span>,</span>
+<span id="cb46-45"><a href="#cb46-45" aria-hidden="true" tabindex="-1"></a>    legend<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb46-46"><a href="#cb46-46" aria-hidden="true" tabindex="-1"></a>    k<span class="op">=</span><span class="dv">10</span>,</span>
+<span id="cb46-47"><a href="#cb46-47" aria-hidden="true" tabindex="-1"></a>    tooltip<span class="op">=</span>[<span class="st">"LAD22CD"</span>, <span class="st">"LAD22NM"</span>, <span class="st">"amended_avg_distance"</span>],</span>
+<span id="cb46-48"><a href="#cb46-48" aria-hidden="true" tabindex="-1"></a>    style_kwds<span class="op">=</span><span class="bu">dict</span>(color<span class="op">=</span><span class="st">'black'</span>, weight<span class="op">=</span><span class="fl">0.5</span>, fillOpacity<span class="op">=</span><span class="fl">0.8</span>),</span>
+<span id="cb46-49"><a href="#cb46-49" aria-hidden="true" tabindex="-1"></a>    highlight_kwds<span class="op">=</span><span class="bu">dict</span>(fillOpacity<span class="op">=</span><span class="dv">1</span>),</span>
+<span id="cb46-50"><a href="#cb46-50" aria-hidden="true" tabindex="-1"></a>    name<span class="op">=</span><span class="st">"Average distance to nearest EV Chargepoint by OA"</span>,</span>
+<span id="cb46-51"><a href="#cb46-51" aria-hidden="true" tabindex="-1"></a>    show<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb46-52"><a href="#cb46-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-53"><a href="#cb46-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Add the map base</span></span>
+<span id="cb46-54"><a href="#cb46-54" aria-hidden="true" tabindex="-1"></a>folium.TileLayer(<span class="st">"CartoDB positron"</span>, show<span class="op">=</span><span class="va">True</span>).add_to(m)</span>
+<span id="cb46-55"><a href="#cb46-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-56"><a href="#cb46-56" aria-hidden="true" tabindex="-1"></a><span class="co"># Add layer control to map</span></span>
+<span id="cb46-57"><a href="#cb46-57" aria-hidden="true" tabindex="-1"></a>folium.LayerControl().add_to(m)</span>
+<span id="cb46-58"><a href="#cb46-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-59"><a href="#cb46-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Save the map to an HTML file</span></span>
+<span id="cb46-60"><a href="#cb46-60" aria-hidden="true" tabindex="-1"></a>m.save(<span class="st">"Outputs/Interactive_map.html"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following code builds four choropleth maps of the features in <code>final_df</code>. This is saved down into an <code>Outputs/</code> folder as a .png file.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create 2x2 subplots</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">2</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">12</span>))</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define aliases for column names</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>column_aliases <span class="op">=</span> {</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amended_PiVs'</span>: <span class="st">'Plug-in Vehicles (PiVs)'</span>,</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amended_total_chargepoints'</span>: <span class="st">'Total EV Chargepoints (EVCs)'</span>,</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amended_ratio_PiVs_to_chargepoints'</span>: <span class="st">'Ratio of PiVs to EVCs'</span>,</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amended_avg_distance'</span>: <span class="st">'Average distance to nearest EVC by OA (metres)'</span></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop through each variable and corresponding subplot</span></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>variables <span class="op">=</span> <span class="bu">list</span>(column_aliases.keys())</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> variable, ax <span class="kw">in</span> <span class="bu">zip</span>(variables, axs.flatten()):</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>    final_df.plot(column<span class="op">=</span>variable, cmap<span class="op">=</span><span class="st">'YlOrRd'</span>, ax<span class="op">=</span>ax, legend<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>    ax.set_title(<span class="ss">f'</span><span class="sc">{</span>column_aliases[variable]<span class="sc">}</span><span class="ss">'</span>)  <span class="co"># Set the title using the alias</span></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>    ax.set_axis_off()  <span class="co"># Turn off axis</span></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(wspace<span class="op">=</span><span class="fl">0.05</span>, hspace<span class="op">=</span><span class="fl">0.05</span>)  <span class="co"># Adjust space between subplots</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()  <span class="co"># Adjust layout to prevent overlap</span></span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Export to Outputs/ folder</span></span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Outputs/Feature_choropleths.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Close figure</span></span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following code creates two scatterplots with regression lines for selected features from the <code>final_df</code>. This is saved down into an <code>Outputs/</code> folder as a .png file.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a subplot grid with 1 row and 2 columns</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">6</span>))</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the first scatter plot</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">'amended_PiVs'</span>, y<span class="op">=</span><span class="st">'amended_total_chargepoints'</span>, data<span class="op">=</span>final_df, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>sns.regplot(x<span class="op">=</span><span class="st">'amended_PiVs'</span>, y<span class="op">=</span><span class="st">'amended_total_chargepoints'</span>, data<span class="op">=</span>final_df, scatter<span class="op">=</span><span class="va">False</span>, ax<span class="op">=</span>axs[<span class="dv">0</span>])</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_xlabel(column_aliases[<span class="st">'amended_PiVs'</span>])  <span class="co"># Set x-axis label using alias</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_ylabel(column_aliases[<span class="st">'amended_total_chargepoints'</span>])  <span class="co"># Set y-axis label using alias</span></span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">0</span>].set_title(<span class="st">'Plug-in Vehicles vs. Total EV Chargepoints'</span>)  <span class="co"># Set the title</span></span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the second scatter plot</span></span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(x<span class="op">=</span><span class="st">'amended_ratio_PiVs_to_chargepoints'</span>, y<span class="op">=</span><span class="st">'amended_avg_distance'</span>, data<span class="op">=</span>final_df, ax<span class="op">=</span>axs[<span class="dv">1</span>])</span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>sns.regplot(x<span class="op">=</span><span class="st">'amended_ratio_PiVs_to_chargepoints'</span>, y<span class="op">=</span><span class="st">'amended_avg_distance'</span>, data<span class="op">=</span>final_df, scatter<span class="op">=</span><span class="va">False</span>, ax<span class="op">=</span>axs[<span class="dv">1</span>])</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_xlabel(column_aliases[<span class="st">'amended_ratio_PiVs_to_chargepoints'</span>])  <span class="co"># Set x-axis label using alias</span></span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_ylabel(column_aliases[<span class="st">'amended_avg_distance'</span>])  <span class="co"># Set y-axis label using alias</span></span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>axs[<span class="dv">1</span>].set_title(<span class="st">'Ratio vs. Distance'</span>)  <span class="co"># Set the title</span></span>
+<span id="cb48-17"><a href="#cb48-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-18"><a href="#cb48-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust layout</span></span>
+<span id="cb48-19"><a href="#cb48-19" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb48-20"><a href="#cb48-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-21"><a href="#cb48-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Export to Outputs/ folder</span></span>
+<span id="cb48-22"><a href="#cb48-22" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Outputs/Scatter_Reg_Plots.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb48-23"><a href="#cb48-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-24"><a href="#cb48-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Close figure</span></span>
+<span id="cb48-25"><a href="#cb48-25" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following code creates a correlation matrix heatmap of the features in <code>final_df</code>. This is saved down into an <code>Outputs/</code> folder as a .png file.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the correlation matrix</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> final_df[[</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amended_PiVs'</span>,<span class="st">'amended_total_chargepoints'</span>,</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'amended_ratio_PiVs_to_chargepoints'</span>,<span class="st">'amended_avg_distance'</span>]].corr()</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a mask for the diagonal cells</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> np.triu(np.ones_like(correlation_matrix, dtype<span class="op">=</span><span class="bu">bool</span>))</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate a heatmap</span></span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">7</span>))</span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>sns.heatmap(correlation_matrix, cmap<span class="op">=</span><span class="st">'RdYlGn'</span>, annot<span class="op">=</span><span class="va">True</span>, </span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>            fmt<span class="op">=</span><span class="st">".2f"</span>, mask<span class="op">=</span>mask, vmin<span class="op">=-</span><span class="dv">1</span>, vmax<span class="op">=</span><span class="dv">1</span>, cbar_kws<span class="op">=</span>{<span class="st">"shrink"</span>: <span class="fl">0.75</span>}, linewidth<span class="op">=</span><span class="fl">.5</span>)</span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate axis labels</span></span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a>plt.yticks(rotation<span class="op">=</span><span class="dv">45</span>)</span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-18"><a href="#cb49-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis labels using aliases and wrap text</span></span>
+<span id="cb49-19"><a href="#cb49-19" aria-hidden="true" tabindex="-1"></a>plt.xticks(ticks<span class="op">=</span><span class="bu">range</span>(<span class="bu">len</span>(correlation_matrix.columns)), </span>
+<span id="cb49-20"><a href="#cb49-20" aria-hidden="true" tabindex="-1"></a>           labels<span class="op">=</span>[<span class="st">'Plug-in Vehicles'</span>, </span>
+<span id="cb49-21"><a href="#cb49-21" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'Total EV Chargepoints'</span>, </span>
+<span id="cb49-22"><a href="#cb49-22" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'Ratio of PiVs to EVCs'</span>, </span>
+<span id="cb49-23"><a href="#cb49-23" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'Avg dist to nearest EVC'</span>])</span>
+<span id="cb49-24"><a href="#cb49-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-25"><a href="#cb49-25" aria-hidden="true" tabindex="-1"></a>plt.yticks(ticks<span class="op">=</span>np.arange(<span class="bu">len</span>(correlation_matrix.columns))<span class="op">+</span><span class="fl">0.5</span>, </span>
+<span id="cb49-26"><a href="#cb49-26" aria-hidden="true" tabindex="-1"></a>           labels<span class="op">=</span>[<span class="st">'Plug-in Vehicles'</span>, </span>
+<span id="cb49-27"><a href="#cb49-27" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'Total EV Chargepoints'</span>, </span>
+<span id="cb49-28"><a href="#cb49-28" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'Ratio of PiVs to EVCs'</span>, </span>
+<span id="cb49-29"><a href="#cb49-29" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'Avg dist to nearest EVC'</span>])</span>
+<span id="cb49-30"><a href="#cb49-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-31"><a href="#cb49-31" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Matrix Heatmap'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb49-32"><a href="#cb49-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-33"><a href="#cb49-33" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb49-34"><a href="#cb49-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-35"><a href="#cb49-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Export to Outputs/ folder</span></span>
+<span id="cb49-36"><a href="#cb49-36" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Outputs/CorrelationMatrix.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb49-37"><a href="#cb49-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb49-38"><a href="#cb49-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Close figure</span></span>
+<span id="cb49-39"><a href="#cb49-39" aria-hidden="true" tabindex="-1"></a>plt.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-a-ranking" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-ranking">Creating a ranking</h2>
+<p>The following code creates a simple ranking of LADs based on:</p>
+<ul>
+<li>Average distance to the nearest EV chargepoint</li>
+<li>Ratio of Plug-in vehicles to EV chargepoints</li>
+</ul>
+<p>The idea is that if the average distance is high, and the ratio is high, then these areas may be lacking public EV infrastructure.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new dataframe containing just the amended features for the ranking</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>ranking <span class="op">=</span> final_df.drop(final_df.columns[<span class="dv">3</span>:<span class="dv">9</span>], axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rank the values in each column</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>ranking[<span class="st">'rank_ratio'</span>] <span class="op">=</span> ranking[<span class="st">'amended_ratio_PiVs_to_chargepoints'</span>].rank(ascending<span class="op">=</span><span class="va">True</span>, method<span class="op">=</span><span class="st">'min'</span>)</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>ranking[<span class="st">'rank_distance'</span>] <span class="op">=</span> ranking[<span class="st">'amended_avg_distance'</span>].rank(ascending<span class="op">=</span><span class="va">True</span>, method<span class="op">=</span><span class="st">'min'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the combined ranking</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>ranking[<span class="st">'combined_rank'</span>] <span class="op">=</span> (ranking[<span class="st">'rank_ratio'</span>] <span class="op">+</span> ranking[<span class="st">'rank_distance'</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>ranking[<span class="st">'combined_rank'</span>] <span class="op">=</span> ranking[<span class="st">'combined_rank'</span>].rank(ascending<span class="op">=</span><span class="va">True</span>, method<span class="op">=</span><span class="st">'min'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following code creates a map of the top 10 <code>combined_rank</code> LADs in <code>ranking</code>. This is saved down into an <code>Outputs/</code> folder as a .png file.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get top 10 areas</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>ranking[[<span class="st">'LAD22CD'</span>,<span class="st">'LAD22NM'</span>,<span class="st">'combined_rank'</span>]].sort_values(by<span class="op">=</span><span class="st">'combined_rank'</span>, ascending<span class="op">=</span><span class="va">True</span>).head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+combined_rank
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+288
+</th>
+<td>
+E09000013
+</td>
+<td>
+Hammersmith and Fulham
+</td>
+<td>
+1.0
+</td>
+</tr>
+<tr>
+<th>
+308
+</th>
+<td>
+E09000033
+</td>
+<td>
+Westminster
+</td>
+<td>
+2.0
+</td>
+</tr>
+<tr>
+<th>
+303
+</th>
+<td>
+E09000028
+</td>
+<td>
+Southwark
+</td>
+<td>
+3.0
+</td>
+</tr>
+<tr>
+<th>
+276
+</th>
+<td>
+E09000001
+</td>
+<td>
+City of London
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr>
+<th>
+295
+</th>
+<td>
+E09000020
+</td>
+<td>
+Kensington and Chelsea
+</td>
+<td>
+4.0
+</td>
+</tr>
+<tr>
+<th>
+299
+</th>
+<td>
+E09000024
+</td>
+<td>
+Merton
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr>
+<th>
+307
+</th>
+<td>
+E09000032
+</td>
+<td>
+Wandsworth
+</td>
+<td>
+6.0
+</td>
+</tr>
+<tr>
+<th>
+282
+</th>
+<td>
+E09000007
+</td>
+<td>
+Camden
+</td>
+<td>
+8.0
+</td>
+</tr>
+<tr>
+<th>
+287
+</th>
+<td>
+E09000012
+</td>
+<td>
+Hackney
+</td>
+<td>
+9.0
+</td>
+</tr>
+<tr>
+<th>
+294
+</th>
+<td>
+E09000019
+</td>
+<td>
+Islington
+</td>
+<td>
+9.0
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort and select the top 10 areas</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>top_10_areas <span class="op">=</span> ranking.sort_values(by<span class="op">=</span><span class="st">'combined_rank'</span>, ascending<span class="op">=</span><span class="va">True</span>).head(<span class="dv">10</span>)</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot only the top 10 areas</span></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">10</span>))</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>top_10_areas.plot(ax<span class="op">=</span>ax, color<span class="op">=</span><span class="st">'#88C88E'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>, legend<span class="op">=</span><span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Annotate the top 10 areas with their rank</span></span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, row <span class="kw">in</span> top_10_areas.iterrows():</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>    plt.annotate(text<span class="op">=</span><span class="bu">int</span>(row[<span class="st">'combined_rank'</span>]), xy<span class="op">=</span>(row.geometry.centroid.x, row.geometry.centroid.y),</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>                 horizontalalignment<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot basemap</span></span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax, crs<span class="op">=</span>top_10_areas.crs.to_string(), source<span class="op">=</span>ctx.providers.CartoDB.Positron)</span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Set title and remove axis</span></span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Top 10 Areas by Combined Rank'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>ax.set_axis_off()</span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust layout</span></span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Export to Outputs/ folder</span></span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Outputs/Map_of_Top_10.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Close figure</span></span>
+<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The following code creates a map of the bottom 10 <code>combined_rank</code> LADs in <code>ranking</code>. This is saved down into an <code>Outputs/</code> folder as a .png file.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show bottom 10 areas</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>ranking[[<span class="st">'LAD22CD'</span>,<span class="st">'LAD22NM'</span>,<span class="st">'combined_rank'</span>]].sort_values(by<span class="op">=</span><span class="st">'combined_rank'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="dataframe table table-sm table-striped small">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+LAD22CD
+</th>
+<th>
+LAD22NM
+</th>
+<th>
+combined_rank
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>
+99
+</th>
+<td>
+E07000074
+</td>
+<td>
+Maldon
+</td>
+<td>
+330.0
+</td>
+</tr>
+<tr>
+<th>
+89
+</th>
+<td>
+E07000064
+</td>
+<td>
+Rother
+</td>
+<td>
+329.0
+</td>
+</tr>
+<tr>
+<th>
+235
+</th>
+<td>
+E07000242
+</td>
+<td>
+East Hertfordshire
+</td>
+<td>
+328.0
+</td>
+</tr>
+<tr>
+<th>
+16
+</th>
+<td>
+E06000017
+</td>
+<td>
+Rutland
+</td>
+<td>
+327.0
+</td>
+</tr>
+<tr>
+<th>
+100
+</th>
+<td>
+E07000075
+</td>
+<td>
+Rochford
+</td>
+<td>
+326.0
+</td>
+</tr>
+<tr>
+<th>
+85
+</th>
+<td>
+E07000047
+</td>
+<td>
+West Devon
+</td>
+<td>
+325.0
+</td>
+</tr>
+<tr>
+<th>
+177
+</th>
+<td>
+E07000169
+</td>
+<td>
+Selby
+</td>
+<td>
+324.0
+</td>
+</tr>
+<tr>
+<th>
+160
+</th>
+<td>
+E07000139
+</td>
+<td>
+North Kesteven
+</td>
+<td>
+323.0
+</td>
+</tr>
+<tr>
+<th>
+82
+</th>
+<td>
+E07000044
+</td>
+<td>
+South Hams
+</td>
+<td>
+321.0
+</td>
+</tr>
+<tr>
+<th>
+199
+</th>
+<td>
+E07000198
+</td>
+<td>
+Staffordshire Moorlands
+</td>
+<td>
+321.0
+</td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort and select the bottom 10 areas</span></span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>bottom_10_areas <span class="op">=</span> ranking.sort_values(by<span class="op">=</span><span class="st">'combined_rank'</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot only the top 10 areas</span></span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">1</span>, figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">10</span>))</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>bottom_10_areas.plot(ax<span class="op">=</span>ax, color<span class="op">=</span><span class="st">'#DE6464'</span>, edgecolor<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="dv">1</span>, legend<span class="op">=</span><span class="va">True</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Annotate the top 10 areas with their rank</span></span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> idx, row <span class="kw">in</span> bottom_10_areas.iterrows():</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a>    plt.annotate(text<span class="op">=</span><span class="bu">int</span>(row[<span class="st">'combined_rank'</span>]), xy<span class="op">=</span>(row.geometry.centroid.x, row.geometry.centroid.y),</span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>                 horizontalalignment<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, weight<span class="op">=</span><span class="st">'bold'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot basemap</span></span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>ctx.add_basemap(ax, crs<span class="op">=</span>bottom_10_areas.crs.to_string(), source<span class="op">=</span>ctx.providers.CartoDB.Positron)</span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Set title and remove axis</span></span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Bottom 10 Areas by Combined Rank'</span>, fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>ax.set_axis_off()</span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust layout</span></span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Export to Outputs/ folder</span></span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'Outputs/Map_of_Bottom_10.png'</span>, dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Close figure</span></span>
+<span id="cb56-27"><a href="#cb56-27" aria-hidden="true" tabindex="-1"></a>plt.close(fig)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
